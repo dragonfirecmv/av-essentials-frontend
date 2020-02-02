@@ -1,0 +1,13 @@
+.view-panel-gallery-albums {
+  width: 100%;
+  padding: 12px;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  .card-photo-enclosure {
+    padding: 8px;
+  }
+  
+}

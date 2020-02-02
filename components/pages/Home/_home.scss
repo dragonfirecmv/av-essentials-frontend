@@ -1,0 +1,321 @@
+.page-home {
+  padding-bottom: 32px;
+  position: relative;
+
+  .section {
+    &.banner {
+      margin: 24px 0;
+      border-radius: 8px;
+    }
+
+    &.about-us {
+      padding: 0 32px;
+      padding-top: 64px;
+      padding-bottom: 120px;
+
+      display: grid;
+      grid-template-columns: 1fr auto;
+      grid-template-rows: 1fr;
+      grid-template-areas: "area-msg area-pic";
+
+      & > .area-mascot {
+        grid-area: area-pic;
+        padding-bottom: 32px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: center;
+
+        img {
+          height: 300px;
+        }
+      }
+
+      & > .area-message {
+        grid-area: area-msg;
+        padding-right: 72px;
+        overflow: visible;
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+
+        & > .area-action {
+          overflow: visible;
+
+          display: flex;
+          flex-direction: row;
+
+          & > .spacer {
+            width: 8px;
+            height: 8px;
+          }
+        }
+      }
+
+      @media (min-width: 1201px) {
+      }
+
+      @media (max-width: 1200px) {
+      }
+
+      @media (max-width: 992px) {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: ".";
+
+        & > .area-mascot {
+          grid-area: unset;
+          padding-bottom: 32px;
+          align-items: center;
+          justify-content: center;
+
+          img {
+            height: 216px;
+          }
+        }
+
+        & > .area-message {
+          grid-area: unset;
+          overflow: visible;
+          align-items: center;
+          text-align: center;
+          padding-right: 0;
+
+          & > .area-action {
+            grid-area: unset;
+            overflow: visible;
+
+            display: flex;
+            flex-direction: row;
+
+            & > .spacer {
+              width: 8px;
+              height: 8px;
+            }
+          }
+        }
+      }
+
+      @media (max-width: 768px) {
+      }
+
+      @media (max-width: 576px) {
+        padding: 0 24px;
+        padding-top: 40px;
+        padding-bottom: 60px;
+
+        & > .area-mascot {
+          grid-area: unset;
+          padding-bottom: 32px;
+          align-items: center;
+          justify-content: center;
+
+          img {
+            height: 144px;
+          }
+        }
+      }
+
+      @media (max-width: 400px) {
+        & > .area-mascot {
+          grid-area: unset;
+          padding-bottom: 32px;
+          align-items: center;
+          justify-content: center;
+
+          img {
+            height: 128px;
+          }
+        }
+      }
+    }
+
+    &.addons {
+
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr;
+      grid-template-areas: ".";
+
+
+      & > .area-join-us,
+      & > .area-contact-us {
+        padding: 48px 32px;
+        padding-bottom: 56px;
+        overflow: visible;
+        border: 1px solid rgba($color: #000000, $alpha: 0.05);
+
+        background-color: rgba($color: #000000, $alpha: 0.02);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+        & > .area-action {
+          grid-area: unset;
+          overflow: visible;
+
+          display: flex;
+          flex-direction: row;
+
+          & > .spacer {
+            width: 8px;
+            height: 8px;
+          }
+        }
+
+        @media (max-width: 400px) {
+          padding: 36px 24px;
+          padding-bottom: 48px;
+        }
+      }
+    }
+  }
+
+
+
+  .tx {
+    &.joinus-tag {
+      padding: 8px;
+      font-family: "Source Sans Pro", sans-serif;
+      font-size: 21pt;
+      font-weight: 600;
+      line-height: 1.5em;
+      opacity: 0.8;
+    }
+
+    &.joinus-header {
+      width: 80%;
+      padding: 8px;
+      padding-bottom: 32px;
+      font-family: "Gilroy";
+      font-size: 32pt;
+      font-weight: 700;
+    }
+
+    &.about-tag {
+      font-family: "Source Sans Pro", sans-serif;
+      font-size: 18pt;
+      font-weight: 600;
+      line-height: 1.5em;
+      opacity: 0.8;
+    }
+
+    &.about-header {
+      padding: 8px 0;
+      font-family: "Gilroy";
+      font-size: 48pt;
+      font-weight: 700;
+    }
+
+    &.about-par {
+      width: 100%;
+      padding: 24px 0;
+      font-family: "Source Sans Pro", sans-serif;
+      font-size: 16pt;
+      line-height: 1.5em;
+      opacity: 0.8;
+    }
+
+    @media (min-width: 1201px) {
+    }
+
+    @media (max-width: 1200px) {
+      &.about-header {
+        padding: 8px 0;
+        font-size: 40pt;
+      }
+
+      &.about-par {
+        width: 100%;
+        padding: 24px 0;
+        font-size: 14pt;
+        line-height: 1.5em;
+      }
+    }
+
+    @media (max-width: 992px) {
+      &.about-header {
+        width: 80%;
+        padding: 8px 0;
+      }
+
+      &.about-par {
+        width: 80%;
+        padding: 24px 0;
+        font-size: 14pt;
+        line-height: 1.5em;
+      }
+    }
+
+    @media (max-width: 768px) {
+      &.about-header {
+        width: 90%;
+        padding: 8px 0;
+      }
+
+      &.about-par {
+        width: 90%;
+        padding: 24px 0;
+        font-size: 14pt;
+        line-height: 1.5em;
+      }
+    }
+
+    @media (max-width: 576px) {
+      &.joinus-tag {
+        font-size: 18pt;
+      }
+
+      &.joinus-header {
+        width: 100%;
+        padding: 0;
+        padding-bottom: 32px;
+        font-size: 28pt;
+      }
+
+      &.about-header {
+        width: 100%;
+        font-size: 24pt;
+        padding: 8px 0;
+      }
+
+      &.about-par {
+        width: 100%;
+        padding: 12px 0;
+        padding-bottom: 32px;
+        font-size: 12pt;
+        line-height: 1.5em;
+      }
+    }
+
+    @media (max-width: 400px) {
+      &.joinus-tag {
+        font-size: 18pt;
+      }
+
+      &.joinus-header {
+        width: 100%;
+        padding: 0;
+        padding-bottom: 32px;
+        font-size: 24pt;
+      }
+
+      &.about-header {
+        width: 100%;
+        font-size: 21pt;
+        padding: 8px 0;
+      }
+
+      &.about-par {
+        width: 100%;
+        padding: 12px 0;
+        padding-bottom: 32px;
+        font-size: 11pt;
+        line-height: 1.5em;
+      }
+    }
+  }
+}

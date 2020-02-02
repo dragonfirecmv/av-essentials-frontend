@@ -1,0 +1,90 @@
+.view-toast-default {
+  width: 350px;
+  min-height: 70px;
+  border-radius: 4px;
+  pointer-events: all;
+
+  background: white;
+  box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.1);
+  // border: 1px solid rgba(0, 0, 0, 0.1);
+
+  @media screen and (max-width: 500px) {
+    width: 100vw;
+    min-height: 50px;
+    border-radius: 0;
+
+    box-shadow: 0px -2px 6px 0px rgba(0, 0, 0, 0.1);
+  }
+
+  display: grid;
+  grid-template-columns: auto auto 1fr auto;
+  grid-template-rows: 1fr;
+  grid-template-areas: ". . . .";
+  
+
+  & > .area {
+    &.indicator {
+      width: 4px;
+      height: 100%;
+
+      &.i-info {
+        background-color: rgb(48, 134, 235);
+      }
+
+      &.i-error {
+        background-color: rgb(233, 78, 59);
+      }
+
+      &.i-warning {
+        background-color: rgb(255, 193, 32);
+      }
+
+      &.i-success {
+        background-color: rgb(70, 215, 100);
+      }
+    }
+
+    &.info {
+      padding: 8px 12px;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      justify-content: center;
+      // align-items: center;
+    }
+
+    &.close {
+      width: 48px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  .tx {
+
+    &.toast-title {
+      font-family: "Gilroy";
+      font-size: 11pt;
+      font-weight: 700;
+
+      @media screen and (max-width: 500px) {
+        font-size: 10pt;
+      }
+    }
+
+    &.toast-msg {
+      font-family: "Source Sans Pro";
+      font-size: 12pt;
+      font-weight: 500;
+
+      @media screen and (max-width: 500px) {
+        font-size: 11pt;
+      }
+    }
+
+    &.btn-close {
+      font-size: 18pt;
+    }
+  }
+}

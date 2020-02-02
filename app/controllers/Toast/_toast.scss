@@ -1,0 +1,48 @@
+.toast-composition {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 4;
+  pointer-events: none;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  &.hide {
+    display: none;
+  }
+
+  & > .enclosure-toasts {
+    overflow: visible;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: 21px;
+
+    @media screen and (max-width: 500px) {
+      padding: 0;
+    }
+
+    & > .enclose-indiv {
+      overflow: visible;
+      padding: 4px 0 0 0;
+
+      @media screen and (max-width: 500px) {
+        padding: 0;
+        overflow: hidden;
+      }
+    }
+  }
+
+  & > .enclosure-tests {
+    overflow: visible;
+    position: absolute;
+    pointer-events: all;
+    right: 0;
+    top: 0;
+  }
+}
