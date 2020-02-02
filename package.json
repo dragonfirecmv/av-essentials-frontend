@@ -1,4 +1,9 @@
 {
+  "author": {
+    "name": "Aldey Wahyu Putra",
+    "email": "aldeywp00@gmail.com"
+  },
+  "license" : "MIT",
   "scripts": {
     "start": "PORT0=8080 node server/index.js",
     "dev": "parcel index.html -p 1111",
