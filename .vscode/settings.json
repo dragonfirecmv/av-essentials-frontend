@@ -5,5 +5,8 @@
     "**/server": true,
     "index.html": true
   },
-  "typescript.tsdk": "node_modules/typescript/lib"
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "files.watcherExclude": {
+    "**/node_modules/**": false
+  }
 }
